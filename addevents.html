@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Events - Vanamamalai Mutt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --secondary-color: #B8860B;
+            --gold: #FFD700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.95), rgba(184, 134, 11, 0.95));
+            padding: 2rem;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .back-to-site {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-site:hover {
+            color: var(--secondary-color);
+            transform: translateX(-5px);
+        }
+
+        .events-list {
+            margin-top: 2rem;
+            border-top: 2px solid #ddd;
+            padding-top: 2rem;
+        }
+
+        .event-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .event-card p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .file-input {
+            width: 100%;
+            padding: 8px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .file-input:hover {
+            border-color: var(--primary-color);
+        }
+
+        .image-preview {
+            margin-top: 10px;
+            max-width: 300px;
+            max-height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .image-preview img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .event-card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Add New Event</h1>
+            <p>Enter the details of the upcoming event</p>
+        </div>
+
+        <form id="eventForm" onsubmit="return handleSubmit(event)">
+            <div class="form-group">
+                <label for="eventPhoto">Event Photo</label>
+                <input type="file" id="eventPhoto" accept="image/*" class="file-input" required>
+                <div id="imagePreview" class="image-preview"></div>
+            </div>
+            <div class="form-group">
+                <label for="eventName">Event Name</label>
+                <input type="text" id="eventName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="eventDate">Event Date</label>
+                <input type="date" id="eventDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="eventTime">Event Time</label>
+                <input type="time" id="eventTime" required>
+            </div>
+
+            <div class="form-group">
+                <label for="eventLocation">Location</label>
+                <input type="text" id="eventLocation" required>
+            </div>
+
+            <div class="form-group">
+                <label for="eventDescription">Description</label>
+                <textarea id="eventDescription" rows="4" required></textarea>
+            </div>
+
+
+
+            <button type="submit" class="btn">Add Event</button>
+        </form>
+        <div id="messageBox"
+            style="display:none; background-color: #d4edda; color: #155724; padding: 10px; margin-top: 10px; border: 1px solid #c3e6cb; border-radius: 5px;">
+            Event added successfully!
+        </div>
+
+
+        <a href="main.html" class="back-to-site">
+            <i class="fas fa-arrow-left"></i>
+            Back to Main Site
+        </a>
+
+        <div class="events-list">
+            <h2>Current Events</h2>
+            <div id="currentEvents"></div>
+        </div>
+    </div>
+
+    <script>
+        // Preview image before upload
+        document.getElementById('eventPhoto').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const preview = document.getElementById('imagePreview');
+                    preview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+                    console.log(`my result is : ${e.target}`);
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const photoFile = document.getElementById('eventPhoto').files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const eventData = {
+                    name: document.getElementById('eventName').value,
+                    date: document.getElementById('eventDate').value,
+                    time: document.getElementById('eventTime').value,
+                    location: document.getElementById('eventLocation').value,
+                    description: document.getElementById('eventDescription').value,
+                    photo: e.target.result
+                };
+
+                // Get existing events from localStorage
+                let events = JSON.parse(localStorage.getItem('events') || '[]');
+                events.push(eventData);
+
+                // Save updated events to localStorage
+                localStorage.setItem('events', JSON.stringify(events));
+
+                // Clear form and image preview
+                event.target.reset();
+                document.getElementById('imagePreview').innerHTML = '';
+
+                // Refresh events display
+                displayEvents();
+
+                function showMessage(text, duration = 500) {
+                    const msg = document.getElementById('messageBox');
+                    msg.textContent = text;
+                    msg.style.display = 'block';
+                    setTimeout(() => {
+                        msg.style.display = 'none';
+                    }, duration);
+                }
+
+            };
+
+            reader.readAsDataURL(photoFile);
+            return false;
+        }
+
+        function displayEvents() {
+            const eventsContainer = document.getElementById('currentEvents');
+            const events = JSON.parse(localStorage.getItem('events') || '[]');
+
+            eventsContainer.innerHTML = events.map((event, index) => `
+                <div class="event-card">
+                    ${event.photo ? `<img src="${event.photo}" alt="${event.name}">` : ''}
+                    <h3>${event.name}</h3>
+                    <p><strong>Date:</strong> ${event.date}</p>
+                    <p><strong>Time:</strong> ${event.time}</p>
+                    <p><strong>Location:</strong> ${event.location}</p>
+                    <p><strong>Description:</strong> ${event.description}</p>
+                    <div class="event-actions">
+                        <button class="btn" onclick="deleteEvent(${index})">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function deleteEvent(index) {
+            let events = JSON.parse(localStorage.getItem('events') || '[]');
+            events.splice(index, 1);
+            localStorage.setItem('events', JSON.stringify(events));
+            displayEvents();
+        }
+
+        // Display events when page loads
+        document.addEventListener('DOMContentLoaded', displayEvents);
+    </script>
+</body>
+
+</html>

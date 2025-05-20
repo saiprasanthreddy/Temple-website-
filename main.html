@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanamamalai Mutt</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./admin.html" class="logo" title="Admin Login" onclick="window.location.href='./admin.html';">
+                <span class="om">ॐ</span> Vanamamalai-Mutt
+            </a>
+            <!-- <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button> -->
+            <div class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#branches">BRANCHES</a>
+                <a href="#temple">TEMPLE</a>
+                <a href="#history">HISTORY</a>
+                <a href="#patashala">PATASHALA</a>
+                <a href="#jeevar">JEEVAR</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="images/hero/shiva.jpeg" alt="Lord Shiva Temple">
+            </div>
+            <div class="slide">
+                <img src="images/hero/shiva 2.jpeg" alt="Temple Architecture">
+            </div>
+            <div class="slide">
+                <img src="images/hero/vinayaka.jpeg" alt="Lord Vinayaka Temple">
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <h1>WELCOME TO VANAMAMALAI MUTT</h1>
+            <p>Celebrating the legacy of Sri Ramanujar and Chithirai Bharani Utsavam</p>
+            <div class="hero-buttons">
+                <button class="explore-btn">Explore Events</button>
+                <button class="donate-btn">learn-more</button>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section class="branches" id="branches">
+        <div class="section-header">
+            <h2><span class="om-symbol">ॐ</span> OUR BRANCHES <span class="om-symbol">ॐ</span></h2>
+            <h3>Serving Communities Across India</h3>
+        </div>
+        <div class="branch-cards">
+            <div class="branch-card">
+                <div class="branch-image">
+                    <img src="images/hero/branchs/arunachalam.jpeg" alt="Arunachalam Temple">
+                    <div class="branch-overlay">
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="branch-content">
+                    <h3>Arunachalam</h3>
+                    <p>Ancient temple dedicated to Lord Shiva, known for its spiritual significance</p>
+                    <div class="branch-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Thiruvannamalai, Tamil Nadu</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="branch-card">
+                <div class="branch-image">
+                    <img src="images/hero/branchs/chennai.jpeg" alt="Chennai Temple">
+                    <div class="branch-overlay">
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="branch-content">
+                    <h3>Chennai</h3>
+                    <p>Modern temple complex serving the spiritual needs of urban devotees</p>
+                    <div class="branch-details">
+                        <p><i class="fas fa-map-marker-alt"></i> T. Nagar, Chennai</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43211</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="branch-card">
+                <div class="branch-image">
+                    <img src="images/hero/branchs/hampi.jpeg" alt="Bengaluru Temple">
+                    <div class="branch-overlay">
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="branch-content">
+                    <h3>Bengaluru</h3>
+                    <p>Heritage temple showcasing the rich cultural history of Karnataka</p>
+                    <div class="branch-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Jayanagar, Bengaluru</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43212</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="branch-card">
+                <div class="branch-image">
+                    <img src="images/hero/branchs/nangunagi.jpeg" alt="Nanguneri Temple">
+                    <div class="branch-overlay">
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="branch-content">
+                    <h3>Nanguneri</h3>
+                    <p>Traditional temple preserving ancient Vedic practices and rituals</p>
+                    <div class="branch-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Nanguneri, Tamil Nadu</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43213</p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- <div class="branch-card">
+                <div class="branch-image">
+                    <img src="https://placehold.co/600x400/B8860B/FFF?text=Chennai" alt="Chennai Branch">
+                    <div class="branch-overlay">
+                        <a href="#" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+                <div class="branch-content">
+                    <h3>Chennai</h3>
+                    <p>Regional Center</p>
+                    <div class="branch-details"> -->
+                        <!-- <p><i class="fas fa-map-marker-alt"></i> T. Nagar, Chennai</p>
+                        <p><i class="fas fa-phone"></i> +91 987-654-3211</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="branch-card">
+                <div class="branch-image">
+                    <img src="https://placehold.co/600x400/8B0000/FFF?text=Bangalore" alt="Bangalore Branch">
+                    <div class="branch-overlay">
+                        <a href="#" class="learn-more">Learn More →</a> -->
+                    <!-- </div>
+                </div>
+                <div class="branch-content">
+                    <h3>Bangalore</h3>
+                    <p>Cultural Center</p>
+                    <div class="branch-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Jayanagar, Bangalore</p>
+                        <p><i class="fas fa-phone"></i> +91 987-654-3212</p>
+                    </div> -->
+                <!-- </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation" id="donation">
+        <div class="section-header">
+            <h2><span class="om-symbol">ॐ</span> MAKE A DONATION <span class="om-symbol">ॐ</span></h2>
+            <h3>Donate Us To Help</h3>
+        </div>
+        <div class="donation-cards">
+            <div class="donation-card">
+                <div class="donation-image">
+                    <img src="images/donations/Protecting Children.jpeg" alt="Protecting Children">
+                </div>
+                <h4>Protecting Children</h4>
+                <p>Temple is place where hindu worship consectetur adipisicing elit, sed do</p>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                    <div class="donation-stats">
+                        <span>Raised: ₹52,384</span>
+                        <span>Goal: ₹85,000</span>
+                    </div>
+                </div>
+                <button class="donate-btn" data-cause="Protecting Children">DONATE NOW</button>
+            </div>
+
+            <div class="donation-card">
+                <div class="donation-image">
+                    <img src="images/donations/Donate NGOs.jpeg" alt="Donate NGOs">
+                </div>
+                <h4>Donate NGOs</h4>
+                <p>Supporting local organizations that help preserve our cultural heritage</p>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%"></div>
+                    </div>
+                    <div class="donation-stats">
+                        <span>Raised: ₹49,444</span>
+                        <span>Goal: ₹78,000</span>
+                    </div>
+                </div>
+                <button class="donate-btn" data-cause="Donate NGOs">DONATE NOW</button>
+            </div>
+
+            <div class="donation-card">
+                <div class="donation-image">
+                    <img src="images/donations/Feed Poor.jpeg" alt="Feed Poor">
+                </div>
+                <h4>Feed Poor</h4>
+                <p>Help us provide meals to those in need through our anna danam program</p>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%"></div>
+                    </div>
+                    <div class="donation-stats">
+                        <span>Raised: ₹78,334</span>
+                        <span>Goal: ₹95,400</span>
+                    </div>
+                </div>
+                <button class="donate-btn" data-cause="Feed Poor">DONATE NOW</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Modal Template -->
+    <template id="donation-modal-template">
+        <div class="donation-modal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h2>Make a Donation</h2>
+                <p class="cause-text">Supporting: <span class="cause-name"></span></p>
+                
+                <div class="donation-amounts">
+                    <button data-amount="1100">₹1,100</button>
+                    <button data-amount="2100">₹2,100</button>
+                    <button data-amount="5100">₹5,100</button>
+                    <button data-amount="11000">₹11,000</button>
+                    <button class="custom-amount">Custom Amount</button>
+                </div>
+
+                <form class="donor-details" style="display: none;">
+                    <div class="form-row">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-row">
+                        <textarea placeholder="Message (Optional)"></textarea>
+                    </div>
+                    <button type="submit" class="submit-donation">Proceed to Payment</button>
+                </form>
+            </div>
+        </div>
+    </template>
+
+    <!-- Current Events Section -->
+    <section class="current-events">
+        <h2>CURRENT EVENTS</h2>
+        <div class="event-cards" id="mainEventCards">
+            <!-- Default events will be here -->
+            <div class="event-card">
+                <img src="images/current/Sri Ramanujar Avathara Utsavam 2024.jpeg" alt="Sri Ramanujar">
+                <h3>Sri Ramanujar Avathara Utsavam 2024</h3>
+                <p>Day 5 - Evening Hamsakapanam</p>
+                <p>May 2024</p>
+                <p>Join us for the grand celebration of Sri Ramanujar's legacy at Vanamamalai Mutt.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="event-card">
+                <img src="images/current/Chithirai Bharani Utsavam.jpeg" alt="Chithirai Bharani">
+                <h3>Chithirai Bharani Utsavam</h3>
+                <p>May 2024</p>
+                <p>Thirunakshathra Utsavam of Srimad Paramahamsedhyadi Sri Pattarulalan Ramanujar Jeeyar Swami.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <!-- Dynamic events will be loaded here -->
+        </div>
+    </section>
+
+    <script>
+        function loadEvents() {
+            const eventCards = document.getElementById('mainEventCards');
+            const events = JSON.parse(localStorage.getItem('events') || '[]');
+
+            // Add dynamic events after the default ones
+            events.forEach(event => {
+                const eventCard = document.createElement('div');
+                eventCard.className = 'event-card';
+                eventCard.innerHTML = `
+                    ${event.photo ? `<img src="${event.photo}" alt="${event.name}">` : ''}
+                    <h3>${event.name}</h3>
+                    <p>${event.location}</p>
+                    <p>${event.date}</p>
+                    <p>${event.description}</p>
+                    <a href="#" class="learn-more">Learn More →</a>
+                `;
+                eventCards.appendChild(eventCard);
+            });
+        }
+
+        // Load events when the page loads
+        document.addEventListener('DOMContentLoaded', loadEvents);
+    </script>
+
+    <!-- Patashala Section -->
+    <section class="patashala" id="patashala">
+        <h2>PATASHALA HIGHLIGHTS</h2>
+        <div class="patashala-cards">
+            <div class="patashala-card">
+                <img src="images/PATASHALA/PATASHALA HIGHLIGHTS.jpeg" alt="Experience Divya 2023">
+                <h3>Experience Divya 2023</h3>
+                <p>Join us for this year's grand celebration of divine traditions and spiritual enlightenment.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="patashala-card">
+                <img src="images/PATASHALA/Schedule Details.jpeg" alt="Schedule Details">
+                <h3>Schedule Details</h3>
+                <p>View our comprehensive schedule of classes, ceremonies, and special events.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="patashala-card">
+                <img src="images/PATASHALA/Student Guidelines.jpeg" alt="Student Guidelines">
+                <h3>Student Guidelines</h3>
+                <p>Essential information for current and prospective students about our programs.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jeeyar & Alwars Section -->
+    <section class="jeeyar-alwars" id="jeevar">
+        <h2>JEEYAR & ALWARS</h2>
+        <div class="jeeyar-cards">
+            <div class="jeeyar-card">
+                <img src="images/Jeeyar/Sri Pattarulalan.jpeg" alt="Sri Pattarulalan">
+                <h3>Srimad Paramahamsedhyadi Sri Pattarulalan Ramanujar Jeeyar</h3>
+                <p>Consecrated during Chithirai Bharani, a pivotal figure in Vanamamalai Mutt's history.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="jeeyar-card">
+                <img src="images/Jeeyar/Sri Madhurkavi Jeeyar Swamy.jpeg" alt="Sri Madhurkavi">
+                <h3>Sri Madhurkavi Jeeyar Swamy</h3>
+                <p>Renowned for his contributions to Sri Vaishnava Sampradaya.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="jeeyar-card">
+                <img src="images/Jeeyar/Nammazhwar.jpeg" alt="Nammazhwar">
+                <h3>Nammazhwar</h3>
+                <p>One of the twelve Alwars, known for his divine hymns.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Temple Section -->
+    <section class="about-temple" id="temple">
+        <h2>ABOUT TEMPLE</h2>
+        <div class="temple-info">
+            <div class="info-card">
+                <h3>History</h3>
+                
+                <p>Founded centuries ago, Vanamamalai Temple is a key Vaishnava center under the Thenkalai Mutt.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="info-card">
+                <h3>Main Daily & Samidhi</h3>
+                <p>Daily rituals to Sriman Narayana with samidhi for Sri Malai Lakshmana and Vanamamalai.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="info-card">
+                <h3>Festivals</h3>
+                <p>Regular celebrations including Chithirai Bharani, Vaikasi Visakam, and Panguni Uthiram.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="info-card">
+                <h3>Travel Information</h3>
+                <p>Location & Navigation: Near Nanguneri, Tamil Nadu. Accessible by train and road.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temple History Section -->
+    <section class="temple-history" id="history">
+        <div class="section-header">
+            <h2>Our Sacred History</h2>
+            <h3>A Legacy of Spiritual Excellence</h3>
+        </div>
+        <div class="history-container">
+            <div class="history-content">
+                <div class="history-text">
+                    <h3>Ancient Beginnings</h3>
+                    <p>The Vanamamalai Mutt, established in the 13th century, stands as one of the most significant Vaishnava institutions in South India. Founded by Sri Periya Nambi, it has been a beacon of spiritual guidance and Vedantic learning for over eight centuries.</p>
+                    
+                    <h3>Spiritual Legacy</h3>
+                    <p>The Mutt is renowned for its preservation of Sri Vaishnava traditions, Sanskrit scriptures, and Tamil literary works. It has played a crucial role in propagating the teachings of Ramanuja and maintaining the spiritual heritage of the Vaishnava sampradaya.</p>
+
+                    <h3>Sacred Architecture</h3>
+                    <p>The temple complex features intricate Dravidian architecture, with its main shrine dedicated to Lord Vishnu. The temple's gopuram (tower) stands as a testament to the architectural brilliance of ancient Tamil craftsmen.</p>
+                </div>
+                <div class="history-timeline">
+                    <div class="timeline-item">
+                        <div class="year">1248 CE</div>
+                        <div class="event">Establishment of Vanamamalai Mutt</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">13th-14th Century</div>
+                        <div class="event">Construction of Main Temple Complex</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">15th Century</div>
+                        <div class="event">Expansion of Educational Activities</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">17th Century</div>
+                        <div class="event">Major Renovations and Additions</div>
+                    </div>
+                </div>
+            </div>
+            <div class="history-gallery">
+                <div class="gallery-item">
+                    <img src="images/history-gallery/history1.jpeg" alt="Ancient Temple Structure">
+                    <p>Historic Temple Architecture</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/history-gallery/Preserved Sacred Texts.jpeg" alt="Ancient Manuscripts">
+                    <p>Preserved Sacred Texts</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/history-gallery/Traditional Ceremonies.jpeg" alt="Traditional Rituals">
+                    <p>Traditional Ceremonies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer class="contact" id="contact">
+        <img src="images/my imgs/god img.jpeg" alt="god">
+        <div class="contact-container">
+           
+            <div class="contact-info">
+                <h2>Contact Us and Make a Donation to Help</h2>
+                <div class="contact-details">
+                    <p><i class="fas fa-phone"></i> +91 987-879-428-48</p>
+                    <p><i class="fas fa-envelope"></i> info@vanamamalaimutt.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Nanguneri, Tamil Nadu, India</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
